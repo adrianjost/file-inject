@@ -1,3 +1,4 @@
+const core = require("@actions/core");
 try {
 	require("./modules/index")();
 } catch (error) {

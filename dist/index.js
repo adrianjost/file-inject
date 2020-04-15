@@ -53,6 +53,7 @@ module.exports = require("os");
 /***/ 104:
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
+const core = __webpack_require__(470);
 try {
 	__webpack_require__(219)();
 } catch (error) {
