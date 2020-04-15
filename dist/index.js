@@ -54,7 +54,11 @@ module.exports = require("os");
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
 const run = __webpack_require__(219);
-run();
+try {
+	run();
+} catch (error) {
+	core.setFailed(`Action failed with error ${error}`);
+}
 
 
 /***/ }),
@@ -441,10 +445,17 @@ const core = __webpack_require__(470);
 
 module.exports = () => {
 	const inputFilepath = core.getInput("filepath");
-	const inputContent = core.getInput("content");
+	const inputContent = core.getInput("content") || process.env.CONTENT;
 	const inputAlignment = core.getInput("alignment");
 	const inputPositionRegexp = core.getInput("position-regexp");
 	const inputRegexpFlags = core.getInput("regexp-flags");
+
+	core.debug(`getInput("filepath"): ${getInput("filepath")}`);
+	core.debug(`getInput("content"): ${getInput("content")}`);
+	core.debug(`getInput("alignment"): ${getInput("alignment")}`);
+	core.debug(`getInput("position-regexp"): ${getInput("position-regexp")}`);
+	core.debug(`getInput("regexp-flags"): ${getInput("regexp-flags")}`);
+	core.debug(`process.env.CONTENT: ${process.env.CONTENT}`);
 
 	if (!inputFilepath) {
 		throw new Error(`The input "filepath" is required.`);
