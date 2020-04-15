@@ -7,11 +7,13 @@ module.exports = () => {
 	const inputPositionRegexp = core.getInput("position-regexp");
 	const inputRegexpFlags = core.getInput("regexp-flags");
 
-	core.debug(`getInput("filepath"): ${getInput("filepath")}`);
-	core.debug(`getInput("content"): ${getInput("content")}`);
-	core.debug(`getInput("alignment"): ${getInput("alignment")}`);
-	core.debug(`getInput("position-regexp"): ${getInput("position-regexp")}`);
-	core.debug(`getInput("regexp-flags"): ${getInput("regexp-flags")}`);
+	core.debug(`getInput("filepath"): ${core.getInput("filepath")}`);
+	core.debug(`getInput("content"): ${core.getInput("content")}`);
+	core.debug(`getInput("alignment"): ${core.getInput("alignment")}`);
+	core.debug(
+		`getInput("position-regexp"): ${core.getInput("position-regexp")}`
+	);
+	core.debug(`getInput("regexp-flags"): ${core.getInput("regexp-flags")}`);
 	core.debug(`process.env.CONTENT: ${process.env.CONTENT}`);
 
 	if (!inputFilepath) {
