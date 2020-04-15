@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`action works with alignment "after" with regexp /"# CHANGELOG\\r?\\n"/i 1`] = `
+Array [
+  "content",
+  "# Changelog
+
+## v0.x.0 (new)
+
+- new content
+
+## v0.1.0 (old)
+
+- stuff
+",
+]
+`;
+
+exports[`action works with alignment "after" with regexp /"# Changelog\\r?\\n"/ 1`] = `
+Array [
+  "content",
+  "# Changelog
+
+## v0.x.0 (new)
+
+- new content
+
+## v0.1.0 (old)
+
+- stuff
+",
+]
+`;
+
+exports[`action works with alignment "after" with regexp /"$"/ 1`] = `
+Array [
+  "content",
+  "# Changelog
+
+## v0.1.0 (old)
+
+- stuff
+
+## v0.x.0 (new)
+
+- new content
+",
+]
+`;
+
+exports[`action works with alignment "after" with regexp /"^"/ 1`] = `
+Array [
+  "content",
+  "
+## v0.x.0 (new)
+
+- new content
+# Changelog
+
+## v0.1.0 (old)
+
+- stuff
+",
+]
+`;
+
+exports[`action works with alignment "before" with regexp /"# CHANGELOG\\r?\\n"/i 1`] = `
+Array [
+  "content",
+  "
+## v0.x.0 (new)
+
+- new content
+# Changelog
+
+## v0.1.0 (old)
+
+- stuff
+",
+]
+`;
+
+exports[`action works with alignment "before" with regexp /"# Changelog\\r?\\n"/ 1`] = `
+Array [
+  "content",
+  "
+## v0.x.0 (new)
+
+- new content
+# Changelog
+
+## v0.1.0 (old)
+
+- stuff
+",
+]
+`;
+
+exports[`action works with alignment "before" with regexp /"$"/ 1`] = `
+Array [
+  "content",
+  "# Changelog
+
+## v0.1.0 (old)
+
+- stuff
+
+## v0.x.0 (new)
+
+- new content
+",
+]
+`;
+
+exports[`action works with alignment "before" with regexp /"^"/ 1`] = `
+Array [
+  "content",
+  "
+## v0.x.0 (new)
+
+- new content
+# Changelog
+
+## v0.1.0 (old)
+
+- stuff
+",
+]
+`;

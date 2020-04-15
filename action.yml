@@ -1,0 +1,27 @@
+name: "File Inject"
+description: "A GitHub Action to inject text into an exisiting file at a given position."
+branding:
+  icon: "edit"
+  color: "gray-dark"
+inputs:
+  filepath:
+    description: "filepath to the file to injet into, relative to the project root"
+    required: true
+  content:
+    description: "the content that should get injected."
+    required: true
+  alignment:
+    description: "should the new text be added before or after the position-regex match? Allowed values: 'before', 'after'."
+    default: "after"
+  position-regexp:
+    description: "RegExp String where the new content should be added. Defaults to the end of the file."
+    default: "$"
+  regexp-flags:
+    description: "RegExp flags to use."
+    default: ""
+outputs:
+  content:
+    description: "The new file content"
+runs:
+  using: "node12"
+  main: "dist/index.js"
