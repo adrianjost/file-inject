@@ -2,7 +2,7 @@ const core = require("@actions/core");
 
 module.exports = () => {
 	const inputFilepath = core.getInput("filepath");
-	const inputContent = core.getInput("content");
+	const inputContent = core.getInput("content") || process.env.CONTENT;
 	const inputAlignment = core.getInput("alignment");
 	const inputPositionRegexp = core.getInput("position-regexp");
 	const inputRegexpFlags = core.getInput("regexp-flags");

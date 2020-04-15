@@ -8,8 +8,8 @@ inputs:
     description: "filepath to the file to injet into, relative to the project root"
     required: true
   content:
-    description: "the content that should get injected."
-    required: true
+    description: "the content that should get injected. Can also be provided by the env 'CONTENT'"
+    default: ""
   alignment:
     description: "should the new text be added before or after the position-regex match? Allowed values: 'before', 'after'."
     default: "after"

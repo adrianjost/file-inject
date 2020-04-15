@@ -16,7 +16,7 @@ A GitHub Action to inject text into an exisiting file at a given position.
 
 **Required:** true
 
-**Description:** The content that should get injected.
+**Description:** The content that should get injected. Can also be provided by the env 'CONTENT'. The reason for that is, the GitHub Actions trims all space/newline charachters from the start/end of the input.
 
 ### `alignment`
 
