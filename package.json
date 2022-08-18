@@ -9,7 +9,7 @@
 	},
 	"author": "Adrian Jost",
 	"dependencies": {
-		"@actions/core": "^1.2.6"
+		"@actions/core": "^1.9.1"
 	},
 	"devDependencies": {
 		"@zeit/ncc": "^0.22.1",
